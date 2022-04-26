@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="start Camera"
+        app:layout_constraintBottom_toTopOf="@+id/STORAGE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/STORAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start STORAGE"
+        app:layout_constraintBottom_toTopOf="@+id/CONTACTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Camera" />
+
+    <Button
+        android:id="@+id/CONTACTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start CONTACTS"
+        app:layout_constraintBottom_toTopOf="@+id/CALENDAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/STORAGE" />
+
+    <Button
+        android:id="@+id/CALENDAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start CALENDAR "
+        app:layout_constraintBottom_toTopOf="@+id/LOCATION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACTS" />
+
+    <Button
+        android:id="@+id/LOCATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start LOCATION "
+        app:layout_constraintBottom_toTopOf="@+id/RECORD_AUDIO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CALENDAR" />
+
+    <Button
+        android:id="@+id/RECORD_AUDIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start RECORD_AUDIO "
+        app:layout_constraintBottom_toTopOf="@+id/Phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LOCATION" />
+
+    <Button
+        android:id="@+id/Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start Phone "
+        app:layout_constraintBottom_toTopOf="@+id/Sms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RECORD_AUDIO" />
+
+    <Button
+        android:id="@+id/Sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start Sms "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
