@@ -22,11 +22,11 @@ import ir.ah.permissionsonandroid.util.CheckSelfPermission.PERMISSION_REQUEST_ST
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfCalendarPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfCameraPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfContactsPermission
-import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfLocationPermission
+import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfFindLocationPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfPhonePermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfRecordAudioPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfSmsPermission
-import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfStoragePermission
+import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfWriteStoragePermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.permissionDenied
 
 class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
         }
         findViewById<Button>(R.id.STORAGE).setOnClickListener {
 
-            checkSelfStoragePermission {
+            checkSelfWriteStoragePermission {
                 startStorage()
             }
         }
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
         }
         findViewById<Button>(R.id.LOCATION).setOnClickListener {
 
-            checkSelfLocationPermission {
+            checkSelfFindLocationPermission {
                 startLocation()
             }
         }
