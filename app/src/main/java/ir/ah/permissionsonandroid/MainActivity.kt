@@ -19,13 +19,13 @@ import ir.ah.permissionsonandroid.util.CheckSelfPermission.PERMISSION_REQUEST_LO
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.PERMISSION_REQUEST_Phone
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.PERMISSION_REQUEST_RECORD_AUDIO
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.PERMISSION_REQUEST_STORAGE
-import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfCalendarPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfCameraPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfContactsPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfFindLocationPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfPhonePermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfRecordAudioPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfSmsPermission
+import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfWriteCalendarPermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.checkSelfWriteStoragePermission
 import ir.ah.permissionsonandroid.util.CheckSelfPermission.permissionDenied
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
         }
         findViewById<Button>(R.id.CALENDAR).setOnClickListener {
 
-            checkSelfCalendarPermission {
+            checkSelfWriteCalendarPermission {
                 startCalendar()
             }
         }

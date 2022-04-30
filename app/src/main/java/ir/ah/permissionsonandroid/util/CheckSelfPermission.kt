@@ -189,17 +189,19 @@ object CheckSelfPermission {
                 // Request the permission. The result will be received in onRequestPermissionResult().
             }
         }
-    }  fun AppCompatActivity.checkSelfFindLocationPermission(startLocation: FunctionBlock) {
+    }
+
+    fun AppCompatActivity.checkSelfFindLocationPermission(startLocation: FunctionBlock) {
         // Check if the Camera permission has been granted
         if (
-         checkSelfPermissionCompat(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+            checkSelfPermissionCompat(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
         ) {
             // Permission is already available, start camera preview
             startLocation()
         } else {
             // Permission is missing and must be requested.
             if (
-             shouldShowRequestPermissionRationaleCompat(Manifest.permission.ACCESS_COARSE_LOCATION)
+                shouldShowRequestPermissionRationaleCompat(Manifest.permission.ACCESS_COARSE_LOCATION)
             ) {
                 // Provide an additional rationale to the user if the permission was not granted
                 // and the user would benefit from additional context for the use of the permission.
@@ -212,36 +214,77 @@ object CheckSelfPermission {
                     }
                     .setPositiveButton("accept") { dialog, which ->
 
-                          requestPermissionsCompat(
-                              arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-                              PERMISSION_REQUEST_LOCATION
-                          )
+                        requestPermissionsCompat(
+                            arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                            PERMISSION_REQUEST_LOCATION
+                        )
                     }
                     .show()
 
             } else {
 
-                 requestPermissionsCompat(
-                     arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-                     PERMISSION_REQUEST_LOCATION
-                 )
+                requestPermissionsCompat(
+                    arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                    PERMISSION_REQUEST_LOCATION
+                )
 
                 // Request the permission. The result will be received in onRequestPermissionResult().
             }
         }
     }
 
-    fun AppCompatActivity.checkSelfCalendarPermission(startCalendar: FunctionBlock) {
+    fun AppCompatActivity.checkSelfWriteCalendarPermission(startCalendar: FunctionBlock) {
         // Check if the Camera permission has been granted
-        if (/*checkSelfPermissionCompat(Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
-            && */checkSelfPermissionCompat(Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED
+        if (checkSelfPermissionCompat(Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED
+        ) {
+            // Permission is already available, start camera preview
+            startCalendar()
+        } else {
+            // Permission is missing and must be requested.
+            if (
+                shouldShowRequestPermissionRationaleCompat(Manifest.permission.WRITE_CALENDAR)
+            ) {
+                // Provide an additional rationale to the user if the permission was not granted
+                // and the user would benefit from additional context for the use of the permission.
+                // Display a SnackBar with a button to request the missing permission.
+
+                MaterialAlertDialogBuilder(this)
+                    .setMessage(R.string.camera_access_required)
+                    .setNegativeButton("decline") { dialog, which ->
+                        dialog.dismiss()
+                    }
+                    .setPositiveButton("accept") { dialog, which ->
+
+                        requestPermissionsCompat(
+                            arrayOf(Manifest.permission.WRITE_CALENDAR),
+                            PERMISSION_REQUEST_CALENDAR
+                        )
+                    }
+                    .show()
+
+            } else {
+
+                requestPermissionsCompat(
+                    arrayOf(Manifest.permission.WRITE_CALENDAR),
+                    PERMISSION_REQUEST_CALENDAR
+                )
+
+                // Request the permission. The result will be received in onRequestPermissionResult().
+            }
+        }
+    }
+
+    fun AppCompatActivity.checkSelfReadCalendarPermission(startCalendar: FunctionBlock) {
+        // Check if the Camera permission has been granted
+        if (checkSelfPermissionCompat(Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
+
         ) {
             // Permission is already available, start camera preview
             startCalendar()
         } else {
             // Permission is missing and must be requested.
             if (shouldShowRequestPermissionRationaleCompat(Manifest.permission.READ_CALENDAR)
-            /*  && shouldShowRequestPermissionRationaleCompat(Manifest.permission.WRITE_CALENDAR)*/
+
             ) {
                 // Provide an additional rationale to the user if the permission was not granted
                 // and the user would benefit from additional context for the use of the permission.
@@ -257,23 +300,17 @@ object CheckSelfPermission {
                             arrayOf(Manifest.permission.READ_CALENDAR),
                             PERMISSION_REQUEST_CALENDAR
                         )
-                        /*    requestPermissionsCompat(
-                          arrayOf(Manifest.permission.WRITE_CALENDAR),
-                          PERMISSION_REQUEST_CALENDAR
-                      )*/
+
                     }
                     .show()
 
             } else {
 
-                /*   requestPermissionsCompat(
-                       arrayOf(Manifest.permission.READ_CALENDAR),
-                       PERMISSION_REQUEST_CALENDAR
-                   )*/
                 requestPermissionsCompat(
-                    arrayOf(Manifest.permission.WRITE_CALENDAR),
+                    arrayOf(Manifest.permission.READ_CALENDAR),
                     PERMISSION_REQUEST_CALENDAR
                 )
+
 
                 // Request the permission. The result will be received in onRequestPermissionResult().
             }
@@ -320,7 +357,7 @@ object CheckSelfPermission {
 
     fun AppCompatActivity.checkSelfWriteStoragePermission(startStorage: FunctionBlock) {
         // Check if the Camera permission has been granted
-        if ( checkSelfPermissionCompat(
+        if (checkSelfPermissionCompat(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             ) == PackageManager.PERMISSION_GRANTED
         ) {
@@ -384,20 +421,20 @@ object CheckSelfPermission {
                         dialog.dismiss()
                     }
                     .setPositiveButton("accept") { dialog, which ->
-                           requestPermissionsCompat(
-                               arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-                               PERMISSION_REQUEST_STORAGE
-                           )
+                        requestPermissionsCompat(
+                            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                            PERMISSION_REQUEST_STORAGE
+                        )
 
                     }
                     .show()
 
             } else {
 
-                 requestPermissionsCompat(
-                     arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-                     PERMISSION_REQUEST_STORAGE
-                 )
+                requestPermissionsCompat(
+                    arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                    PERMISSION_REQUEST_STORAGE
+                )
 
 
                 // Request the permission. The result will be received in onRequestPermissionResult().
