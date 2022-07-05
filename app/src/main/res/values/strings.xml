@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Permissions On Android</string>
 
-    <string name="show_camera">Show camera preview</string>
-    <string name="camera_unavailable"><b>Camera could not be opened.</b>\nThis occurs when the camera is not available (for example it is already in use) or if the system has denied access (for example when camera access has been disabled).</string>
-    <string name="intro">This sample shows a basic implementation for requesting permissions at runtime.\nClick the button below to request the Camera permission and open a full-screen camera preview.</string>
+<!--    <string name="show_camera">Show camera preview</string>-->
+<!--    <string name="camera_unavailable"><b>Camera could not be opened.</b>\nThis occurs when the camera is not available (for example it is already in use) or if the system has denied access (for example when camera access has been disabled).</string>-->
+<!--    <string name="intro">This sample shows a basic implementation for requesting permissions at runtime.\nClick the button below to request the Camera permission and open a full-screen camera preview.</string>
     <string name="open_camera_preview">Open Camera Preview</string>
     <string name="intro_message"><![CDATA[
 This sample shows a basic implementation for requesting permissions at runtime. Click the button to
@@ -11,11 +11,59 @@ request the Camera permission and open a full-screen camera preview.
 
 Note: The "RuntimePermissions" sample provides a more complete overview over the runtime permission
 features available.]]>
-    </string>
+    </string-->>
+
+<!--Permission-->
+
+
+    <string name="decline">NOT NOW</string>
+    <string name="accept">CONTINUE</string>
+<!--    Camera Permission-->
     <string name="camera_access_required">Camera access is required to display the camera preview.</string>
-    <string name="ok">OK</string>
-    <string name="camera_permission_not_available">Permission is not available. Requesting camera permission.</string>
-    <string name="camera_permission_available">Camera permission is available. Starting preview.</string>
     <string name="camera_permission_granted">Camera permission was granted. Starting preview.</string>
     <string name="camera_permission_denied">Camera permission request was denied.</string>
+
+    <!--    storage Permission-->
+    <string name="storage_access_required">storage access is required to display the camera preview.</string>
+    <string name="storage_permission_granted">storage permission was granted. Starting preview.</string>
+    <string name="storage_permission_denied">storage permission request was denied.</string>
+
+    <!--    contacts Permission-->
+    <string name="contacts_access_required">**IGap** needs access to your contacts so that you can connect with your friends across all your devices. Your contacts will be continuously synced with IGap\'s heavily encrypted cloud servers.</string>
+    <string name="contacts_permission_granted">contacts permission was granted. Starting preview.</string>
+    <string name="contacts_permission_denied">contacts permission request was denied.</string>
+
+    <!--    calendar Permission-->
+    <string name="calendar_access_required">calendar access is required to display the camera preview.</string>
+    <string name="calendar_permission_granted">calendar permission was granted. Starting preview.</string>
+    <string name="calendar_permission_denied">calendar permission request was denied.</string>
+    <!--    location Permission-->
+    <string name="location_access_required">location access is required to display the camera preview.</string>
+    <string name="location_permission_granted">location permission was granted. Starting preview.</string>
+    <string name="location_permission_denied">location permission request was denied.</string>
+
+    <!--    record audio Permission-->
+    <string name="record_audio_access_required">record audio  access is required to display the camera preview.</string>
+    <string name="record_audio_permission_granted">record audio  permission was granted. Starting preview.</string>
+    <string name="record_audio_permission_denied">record audio  permission request was denied.</string>
+
+    <!--    phone access Permission-->
+    <string name="phone_access_required">phone access is required to display the camera preview.</string>
+    <string name="phone_permission_granted">phone permission was granted. Starting preview.</string>
+    <string name="phone_permission_denied">phone permission request was denied.</string>
+
+
+
+
+
+
+
+
+
+
+
+    <string name="ok">OK</string>
+<!--    <string name="camera_permission_not_available">Permission is not available. Requesting camera permission.</string>-->
+<!--    <string name="camera_permission_available">Camera permission is available. Starting preview.</string>-->
+
 </resources>

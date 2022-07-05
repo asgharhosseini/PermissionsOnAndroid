@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
             checkSelfCameraPermission {
                 startCamera()
             }
+
         }
         findViewById<Button>(R.id.STORAGE).setOnClickListener {
 

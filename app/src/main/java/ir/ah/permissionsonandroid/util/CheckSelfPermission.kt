@@ -39,10 +39,10 @@ object CheckSelfPermission {
 
                 MaterialAlertDialogBuilder(this)
                     .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.CAMERA),
                             PERMISSION_REQUEST_CAMERA
@@ -80,11 +80,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.phone_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.READ_PHONE_STATE),
                             PERMISSION_REQUEST_Phone
@@ -118,11 +118,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.record_audio_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.RECORD_AUDIO),
                             PERMISSION_REQUEST_RECORD_AUDIO
@@ -159,11 +159,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.location_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                             PERMISSION_REQUEST_LOCATION
@@ -208,11 +208,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.location_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
 
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
@@ -249,11 +249,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.calendar_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
 
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.WRITE_CALENDAR),
@@ -291,11 +291,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.calendar_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.READ_CALENDAR),
                             PERMISSION_REQUEST_CALENDAR
@@ -331,11 +331,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.contacts_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.READ_CONTACTS),
                             PERMISSION_REQUEST_CONTACTS
@@ -374,11 +374,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.storage_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
 
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
@@ -416,11 +416,11 @@ object CheckSelfPermission {
                 // Display a SnackBar with a button to request the missing permission.
 
                 MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.camera_access_required)
-                    .setNegativeButton("decline") { dialog, which ->
+                    .setMessage(R.string.storage_access_required)
+                    .setNegativeButton(R.string.decline) { dialog, which ->
                         dialog.dismiss()
                     }
-                    .setPositiveButton("accept") { dialog, which ->
+                    .setPositiveButton(R.string.accept) { dialog, which ->
                         requestPermissionsCompat(
                             arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
                             PERMISSION_REQUEST_STORAGE
@@ -448,7 +448,7 @@ object CheckSelfPermission {
         if (!shouldShowRequestPermissionRationale(permissionName)) {
             MaterialAlertDialogBuilder(this)
                 .setMessage(R.string.camera_access_required)
-                .setNegativeButton("decline") { dialog, which ->
+                .setNegativeButton(R.string.decline) { dialog, which ->
                     dialog.dismiss()
                 }
                 .setPositiveButton("Ok") { dialog, which ->
